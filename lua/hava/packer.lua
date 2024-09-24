@@ -29,7 +29,10 @@ return require('packer').startup(function(use)
     -- open files with previews, search them or through them.
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.6',
-        requires = { {'nvim-lua/plenary.nvim'} }
+        requires = {
+            "nvim-telescope/telescope-ui-select.nvim",
+            "nvim-lua/plenary.nvim"
+        }
     }
 
     -- themes
@@ -181,5 +184,20 @@ return require('packer').startup(function(use)
 
     -- Highlight certain words and patterns.
     use "echasnovski/mini.hipatterns"
+    
+    -- Session manager.
+    use {
+        "Shatur/neovim-session-manager",
+        requires = {
+            "nvim-telescope/telescope-ui-select.nvim",
+            "nvim-lua/plenary.nvim"
+        }
+    }
+
+    use {
+        "eoh-bse/minintro.nvim",
+        config = function () require("minintro").setup()
+        end
+    }
 
 end)

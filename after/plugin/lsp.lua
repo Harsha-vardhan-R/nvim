@@ -224,7 +224,7 @@ require 'lspconfig'.rust_analyzer.setup{
                 spacing = 4,
             },
             signs = true,
-            update_in_insert = true,
+            update_in_insert = false,
         }
         )
     end,

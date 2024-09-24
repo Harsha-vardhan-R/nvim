@@ -60,7 +60,7 @@ require("neo-tree").setup({
                 highlight = "NeoTreeFileIcon"
             },
             modified = {
-                symbol = "[+]",
+                symbol = "+",
                 highlight = "NeoTreeModified",
             },
             name = {
@@ -110,14 +110,14 @@ require("neo-tree").setup({
         commands = {},
         window = {
             position = "left",
-            width = 30,
+            width = 25,
             mapping_options = {
                 noremap = true,
                 nowait = true,
             },
             mappings = {
-                ["<space>"] = { 
-                    "toggle_node", 
+                ["<space>"] = {
+                    "toggle_node",
                     nowait = false, -- disable `nowait` if you have existing combos starting with this char that you want to use 
                 },
                 ["<2-LeftMouse>"] = "open",
