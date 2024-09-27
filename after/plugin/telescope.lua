@@ -19,6 +19,9 @@ telescope.setup{
             require("telescope.themes").get_dropdown {
 
             }
+        },
+        ["media_files"] = {
+
         }
     }
 }
@@ -33,7 +36,7 @@ vim.keymap.set('n', '<leader>gs', function()
     builtin.grep_string({ search = vim.fn.input("Grep > ") })
 end)
 
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>a', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 vim.keymap.set('n', '<leader>ff', builtin.current_buffer_fuzzy_find, {})
@@ -52,6 +55,9 @@ vim.keymap.set('n', '<leader>lcr', builtin.lsp_references, {})
 vim.keymap.set('n', '<leader>lci', builtin.lsp_incoming_calls, {})
 vim.keymap.set('n', '<leader>lco', builtin.lsp_outgoing_calls, {})
 
+vim.keymap.set('n', '<leader>lm', ":Telescope media_files<CR>" , {})
+
+vim.keymap.set('n', '<leader>tp', ":lua require'telescope'.extensions.projects.projects{}<CR>" , {})
 
 vim.keymap.set('n', '<leader>jj', builtin.jumplist, {})
 

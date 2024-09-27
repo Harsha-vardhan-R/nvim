@@ -11,29 +11,24 @@ vim.api.nvim_set_keymap('n', '<ScrollWheelDown>', '<Down>', { noremap = true, si
 vim.api.nvim_set_keymap('i', '<ScrollWheelUp>', '<Up>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '<ScrollWheelDown>', '<Down>', { noremap = true, silent = true })
 
--- set the cursor colours all.
+-- set the cursor colors all.
 vim.cmd [[ set termguicolors ]]
 
 require("tokyonight").setup({
-    style = "day",
     on_colors = function(colors)
         colors.hint = "#ff8830"
         colors.error = "#ff2c2c"
     end
 })
 
-vim.cmd [[ set bg=light ]]
-vim.cmd [[ colorscheme tokyonight ]]
-
--- vim.cmd [[
---     hi Normal guibg=#ffffff 
---     hi NormalNC guibg=#ffffff 
---     hi NormalFloat guibg=#ffffff
--- ]]
+vim.cmd [[ set bg=dark ]]
+vim.cmd [[ colorscheme tokyonight-moon ]]
 
 vim.cmd [[ hi! link WinSeparator LineNr ]]
 
+-- vim.cmd [[ set statuscolumn=%@SignCb@%s%=%T%@NumCb@%r│\  ]]
 -- vim.cmd [[ hi Comment guifg=#777777 gui=italic]]
+--
 -- vim.cmd [[ 
 --     hi Cursor guifg=black guibg=darkgrey
 --     hi Cursor2 guifg=white guibg=white

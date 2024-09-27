@@ -7,8 +7,8 @@ require('lualine').setup {
         component_separators = '',
         section_separators = { left = '', right = '' },
         disabled_filetypes = {
-            statusline = {'neo-tree'},
-            winbar = {'neo-tree'},
+            statusline = {'neo-tree', 'startup'},
+            winbar = {'neo-tree', 'startup'},
         },
         ignore_focus = {},
         always_divide_middle = true,
@@ -21,7 +21,7 @@ require('lualine').setup {
     },
     sections = {
         lualine_a = { { 'mode', separator = { left = ' ' }, right_padding = 10 } },
-        lualine_b = {{'branch', 'diff', 'diagnostics', separator = '|||' }},
+        lualine_b = {'branch', 'diff', 'diagnostics'},
         lualine_c = {'filename'},
         lualine_x = {'filetype'},
         lualine_y = {'progress'},

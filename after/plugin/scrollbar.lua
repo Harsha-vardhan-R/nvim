@@ -8,7 +8,7 @@ require("scrollbar").setup({
     throttle_ms = 100,
     handle = {
         text = " ",
-        blend = 80, -- Integer between 0 and 100. 0 for fully opaque and 100 to full transparent. Defaults to 30.
+        blend = 90, -- Integer between 0 and 100. 0 for fully opaque and 100 to full transparent. Defaults to 30.
         color = "Grey",
         color_nr = nil, -- cterm
         highlight = "CursorColumn",
@@ -34,7 +34,7 @@ require("scrollbar").setup({
             highlight = "Search",
         },
         Error = {
-            text = { "⨂", "⨂" },
+            text = { "E", "E" },
             priority = 1,
             gui = nil,
             color = "DarkRed",
@@ -43,7 +43,7 @@ require("scrollbar").setup({
             highlight = "DiagnosticVirtualTextError",
         },
         Warn = {
-            text = { "⚠", "⚠" },
+            text = { "H", "H" },
             priority = 2,
             gui = nil,
             color = "Orange",

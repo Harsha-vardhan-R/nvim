@@ -6,6 +6,4 @@ dap.adapters.cpp = {
     args = { '-g' }
 }
 
-
-
 require('dapui').setup()
