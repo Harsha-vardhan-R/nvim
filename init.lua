@@ -14,17 +14,10 @@ vim.api.nvim_set_keymap('i', '<ScrollWheelDown>', '<Down>', { noremap = true, si
 -- set the cursor colors all.
 vim.cmd [[ set termguicolors ]]
 
-require("tokyonight").setup({
-    on_colors = function(colors)
-        colors.hint = "#ff8830"
-        colors.error = "#ff2c2c"
-    end
-})
-
 vim.cmd [[ set bg=dark ]]
-vim.cmd [[ colorscheme tokyonight-moon ]]
-
-vim.cmd [[ hi! link WinSeparator LineNr ]]
+vim.cmd [[ colorscheme rose-pine-main ]]
+--
+-- vim.cmd [[ hi! link WinSeparator LineNr ]]
 
 -- vim.cmd [[ set statuscolumn=%@SignCb@%s%=%T%@NumCb@%r│\  ]]
 -- vim.cmd [[ hi Comment guifg=#777777 gui=italic]]

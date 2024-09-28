@@ -19,7 +19,15 @@ local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-    ensure_installed = {'rust_analyzer', "clangd"},
+    ensure_installed = {
+        'rust_analyzer',
+        "clangd",
+        "lua_ls",
+        "bashls",
+        "pyright",
+        "solidity_ls"
+    },
+    automatic_installation = true,
     handlers = {
         clangd = function()
             require('lspconfig').clangd.setup({
@@ -199,6 +207,22 @@ local default_capabilities = {
 }
 
 require 'lspconfig'.clangd.setup{
+    on_attach = function(client, bufnr)
+        -- Enable diagnostics
+        vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+        vim.lsp.diagnostic.on_publish_diagnostics, {
+            virtual_text = {
+                prefix = '✵',
+                spacing = 4,
+            },
+            signs = true,
+            update_in_insert = true,
+        }
+        )
+    end,
+}
+
+require 'lspconfig'.solidity_ls.setup{
     on_attach = function(client, bufnr)
         -- Enable diagnostics
         vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(

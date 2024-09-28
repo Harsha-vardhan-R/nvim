@@ -110,6 +110,7 @@ require("scrollbar").setup({
         "terminal",
     },
     excluded_filetypes = {
+        'alpha',
         "cmp_docs",
         "cmp_menu",
         "noice",

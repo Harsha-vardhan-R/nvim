@@ -7,8 +7,8 @@ require('lualine').setup {
         component_separators = '',
         section_separators = { left = '', right = '' },
         disabled_filetypes = {
-            statusline = {'neo-tree', 'startup'},
-            winbar = {'neo-tree', 'startup'},
+            statusline = {'neo-tree', 'alpha'},
+            winbar = {'neo-tree', 'alpha'},
         },
         ignore_focus = {},
         always_divide_middle = true,
@@ -65,6 +65,11 @@ require('lualine').setup {
         'fugitive'
     }
 }
+
+
+
+
+
 --
 -- local colors = {
 --   blue   = '#80a0ff',

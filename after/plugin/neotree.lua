@@ -1,8 +1,8 @@
 vim.api.nvim_set_keymap(
-    'n',                  -- Normal mode
-    '<C-n>',             -- Custom key combination
-    ':Neotree toggle<CR>', -- Command to toggle NvimTree
-    { noremap = true, silent = true } -- Additional options
+'n',                  -- Normal mode
+'<C-n>',             -- Custom key combination
+':Neotree toggle<CR>', -- Command to toggle NvimTree
+{ noremap = true, silent = true } -- Additional options
 )
 
 -- vim.cmd("Neotree close")
@@ -269,3 +269,5 @@ require("neo-tree").setup({
                     }
                 }
             })
+
+vim.cmd([[autocmd FileType neo-tree setlocal nofoldenable]])
