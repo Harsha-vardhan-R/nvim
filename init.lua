@@ -1,10 +1,6 @@
 require("hava")
 
 vim.cmd [[ set nocompatible ]]
-vim.cmd [[ 
-    set spell
-    set spelllang=en_us
-]]
 
 vim.api.nvim_set_keymap('n', '<ScrollWheelUp>', '<Up>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<ScrollWheelDown>', '<Down>', { noremap = true, silent = true })
@@ -15,7 +11,7 @@ vim.api.nvim_set_keymap('i', '<ScrollWheelDown>', '<Down>', { noremap = true, si
 vim.cmd [[ set termguicolors ]]
 
 vim.cmd [[ set bg=dark ]]
-vim.cmd [[ colorscheme rose-pine-main ]]
+vim.cmd [[ colorscheme rose-pine-moon ]]
 --
 -- vim.cmd [[ hi! link WinSeparator LineNr ]]
 

@@ -153,7 +153,7 @@ cmp.setup({
             -- Set the max content width based on either: 'fixed_width'
             -- or a percentage of the window width, in this case 20%.
             -- We subtract 10 from 'fixed_width' to leave room for 'kind' fields.
-            local max_content_width = fixed_width and fixed_width - 10 or math.floor(win_width * 0.2)
+            local max_content_width = math.max(math.floor(win_width * 0.5), 50)
 
             -- Truncate the completion entry text if it's longer than the
             -- max content width. We subtract 3 from the max content width
