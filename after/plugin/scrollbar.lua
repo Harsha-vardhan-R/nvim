@@ -5,10 +5,10 @@ require("scrollbar").setup({
     folds = 1000, -- handle folds, set to number to disable folds if no. of lines in buffer exceeds this
     max_lines = false, -- disables if no. of lines in buffer exceeds this
     hide_if_all_visible = false, -- Hides everything if all lines are visible
-    throttle_ms = 100,
+    throttle_ms = 10,
     handle = {
-        text = " ",
-        blend = 90, -- Integer between 0 and 100. 0 for fully opaque and 100 to full transparent. Defaults to 30.
+        text = "",
+        blend = 100, -- Integer between 0 and 100. 0 for fully opaque and 100 to full transparent. Defaults to 30.
         color = "Grey",
         color_nr = nil, -- cterm
         highlight = "CursorColumn",
@@ -16,7 +16,7 @@ require("scrollbar").setup({
     },
     marks = {
         Cursor = {
-            text = "▒",
+            text = "█",
             priority = 0,
             gui = nil,
             color = "Grey",

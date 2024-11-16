@@ -9,9 +9,10 @@ vim.api.nvim_set_keymap('i', '<ScrollWheelDown>', '<Down>', { noremap = true, si
 
 -- set the cursor colors all.
 vim.cmd [[ set termguicolors ]]
+vim.cmd[[set guifont=Hack\ Nerd\ Font:h10.3]]
 
 vim.cmd [[ set bg=dark ]]
-vim.cmd [[ colorscheme rose-pine-moon ]]
+vim.cmd [[ colorscheme catppuccin-mocha ]]
 --
 -- vim.cmd [[ hi! link WinSeparator LineNr ]]
 

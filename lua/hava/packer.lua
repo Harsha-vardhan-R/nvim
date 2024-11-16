@@ -38,7 +38,25 @@ return require('packer').startup(function(use)
     }
 
     -- themes
-    use "rose-pine/neovim"
+    use "Shatur/neovim-ayu"
+    use "catppuccin/nvim"
+    use "folke/tokyonight.nvim"
+    use "rebelot/kanagawa.nvim"
+    use "sainnhe/everforest"
+    use "Mofiqul/vscode.nvim"
+    use "scottmckendry/cyberdream.nvim"
+    use "nyoom-engineering/oxocarbon.nvim"
+    use "ribru17/bamboo.nvim"
+    use "sainnhe/edge"
+    use "mhartington/oceanic-next"
+    use "HoNamDuong/hybrid.nvim"
+    use "zootedb0t/citruszest.nvim"
+    use "NTBBloodbath/doom-one.nvim"
+    use "kaiuri/nvim-juliana"
+    use "yorik1984/newpaper.nvim"
+    use "Verf/deepwhite.nvim"
+    use "ChristianChiarulli/nvcode-color-schemes.vim"
+    use "FrenzyExists/aquarium-vim"
 
     -- code parsing and formatting.
     use {
@@ -158,11 +176,6 @@ return require('packer').startup(function(use)
     -- edit surrunding stuff, like adding paranthesis or adding quotes.
     use { "tpope/vim-surround" }
 
-    -- smooth scroll animations.
-    use {
-        'karb94/neoscroll.nvim'
-    }
-
     -- indent lines.
     use { "lukas-reineke/indent-blankline.nvim" }
 
@@ -202,6 +215,13 @@ return require('packer').startup(function(use)
     use {
         'goolord/alpha-nvim',
         requires = 'nvim-tree/nvim-web-devicons'
+    }
+
+    use {
+        "jake-stewart/force-cul.nvim",
+        config = function()
+            require("force-cul").setup()
+        end
     }
 
 end
